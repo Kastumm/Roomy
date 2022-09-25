@@ -1,0 +1,29 @@
+@import "react-big-calendar/lib/sass/styles";
+
+.rbc-event {
+  background-color: #575757;
+}
+
+.rbc-calendar {
+  background-color: #d7d5d5 !important;
+  border-radius: 5px !important;
+  box-shadow: -4px -4px 10px rgba(0, 0, 0, 0.1),
+    4px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.rbc-row {
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+.rbc-events-container {
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+// .rbc-timeslot-group{
+//   background-color: rgba(0, 0, 0, 0.35);
+// }
+
+.nav-buttons{
+  background-color:#454545;
+  border: 50px;
+}

@@ -1,0 +1,125 @@
+form {
+  display: block;
+  color: var(--main-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+
+  .password {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .password-hide-icon {
+      position: absolute;
+      transform: translateX(-15px);
+      cursor: pointer;
+    }
+  }
+
+  .input-label {
+    font-size: 0px;
+  }
+
+  input {
+    text-indent: 10px;
+    width: 435px;
+    height: 40px;
+    background: none;
+    border-color: var(--main-color);
+    border-radius: 5px;
+    border-width: 1px;
+    line-height: 20px;
+    color: var(--main-color);
+    font-weight: 500;
+    font-size: 14px;
+    border-style: solid;
+  }
+
+  li {
+    margin-bottom: 10px;
+    margin-top: 20px;
+    list-style-type: none;
+  }
+
+  .additional {
+    margin-top: 24px;
+
+    li {
+      margin-top: 0;
+      opacity: 0.5;
+      font-weight: 400;
+      font-size: 14px;
+    }
+    .rememberMe {
+      display: flex;
+
+      input[type="checkbox"] {
+        display: none;
+      }
+
+      label {
+        cursor: pointer;
+        position: relative;
+        background: transparent;
+        width: 20px;
+        height: 20px;
+        border: solid;
+        border-radius: 5px;
+        border-width: 1px;
+        margin: 0;
+        margin-right: 10px;
+      }
+
+      label::before {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        height: 50%;
+        width: 2px;
+        background-color: var(--second-color);
+        content: "";
+        transform: translateX(8px) translateY(-3px) rotate(-45deg);
+        transform-origin: left bottom;
+      }
+
+      label::after {
+        display: none;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        width: 85%;
+        background-color: var(--second-color);
+        content: "";
+        transform: translateX(8px) translateY(-3px) rotate(-45deg);
+        transform-origin: left bottom;
+      }
+
+      input:checked + label::after {
+        display: initial;
+      }
+
+      input:checked + label::before {
+        display: initial;
+      }
+    }
+  }
+}
+
+.here {
+  text-align: center;
+  margin-top: 67px;
+
+  li {
+    color: rgba(19, 19, 19, 0.65);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+
+    a {
+      color: #f6921e;
+    }
+  }
+}

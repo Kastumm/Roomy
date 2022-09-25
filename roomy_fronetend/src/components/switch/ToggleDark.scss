@@ -1,0 +1,36 @@
+input[type="checkbox"] {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+.mode-switch {
+  cursor: pointer;
+  width: 37px;
+  height: 22px;
+  background: var(--switch-button-color2);
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+.mode-switch:after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 16px;
+  width: 20px;
+  height: 20px;
+  background: var(--switch-button-color1);
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+input:checked + .mode-switch:after {
+  left: calc(21px);
+  transform: translateX(-100%);
+}
+
+.mode-switch:active:after {
+  width: 25px;
+}
