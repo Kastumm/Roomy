@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from "react";
+import { MEETINGS_API_URL } from "../constants/constants";
 import axios from "../api/axios";
 
 const MeetingsContext = createContext({});
@@ -8,7 +9,7 @@ export const MeetingsProvider = ({ children }: any) => {
 
   async function getMeetingsData() {
     try {
-      const { data: meetingsData } = await axios.get("/meetings");
+      const { data: meetingsData } = await axios.get(MEETINGS_API_URL);
       setMeetingsData(meetingsData);
     } catch (error) {}
   }

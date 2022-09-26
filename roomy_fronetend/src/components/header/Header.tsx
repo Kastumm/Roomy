@@ -1,5 +1,10 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import {
+  DASHBOARD_URL,
+  ROOMS_URL,
+  SCHEDULE_URL,
+} from "../../constants/constants";
 import ThemeContext from "../../context/ThemeProvider";
 import AuthContext from "../../context/AuthProvider";
 import TQuarterLogo from "./components/TQuarterLogo";
@@ -21,13 +26,13 @@ const Header: React.FC = (): JSX.Element => {
           <>
             <Icon type={"bar"} />
             <nav className="navigation d-flex clear">
-              <NavLink to="/dashboard" style={navigationStyle}>
+              <NavLink to={DASHBOARD_URL} style={navigationStyle}>
                 DASHBOARD
               </NavLink>
-              <NavLink to="/rooms" style={navigationStyle}>
+              <NavLink to={ROOMS_URL} style={navigationStyle}>
                 MEETING ROOMS
               </NavLink>
-              <NavLink to="/schedule" style={navigationStyle}>
+              <NavLink to={SCHEDULE_URL} style={navigationStyle}>
                 YOUR SCHEDULE
               </NavLink>
             </nav>

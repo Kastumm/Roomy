@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from "react";
+import { ROOMS_URL } from "../constants/constants";
 import axios from "../api/axios";
 
 const RoomsContext = createContext({});
@@ -8,7 +9,7 @@ export const RoomsProvider = ({ children }: any) => {
 
   async function getRoomsData() {
     try {
-      const { data: roomsData } = await axios.get("/rooms");
+      const { data: roomsData } = await axios.get(ROOMS_URL);
       setRoomsData(roomsData);
     } catch (error) {}
   }

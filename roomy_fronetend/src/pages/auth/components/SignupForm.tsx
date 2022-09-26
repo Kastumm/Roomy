@@ -1,12 +1,11 @@
 import { useState, useContext, SyntheticEvent, useRef, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import jwtDecode from "jwt-decode";
-import axios from "../../../api/axios";
+import { LOGIN_URL, SIGNUP_API_URL } from "../../../constants/constants";
 import AuthContext from "../../../context/AuthProvider";
 import Button from "../../../components/button/Button";
 import Icon from "../../../components/icon/Icon";
-
-const SINGUP_URL = "/auth/signup";
+import axios from "../../../api/axios";
+import jwtDecode from "jwt-decode";
 
 const SignupForm: React.FC = (): JSX.Element => {
   const { setAuth }: any = useContext(AuthContext);
@@ -44,7 +43,7 @@ const SignupForm: React.FC = (): JSX.Element => {
         throw new Error("*Passwords don't match");
       }
 
-      const response = await axios.post(SINGUP_URL, {
+      const response = await axios.post(SIGNUP_API_URL, {
         username,
         email,
         password,
@@ -175,7 +174,7 @@ const SignupForm: React.FC = (): JSX.Element => {
       <div className="here clear">
         <li>
           Not A Member? Sign In&nbsp;&nbsp;
-          <NavLink to="/login">Here.</NavLink>
+          <NavLink to={LOGIN_URL}>Here.</NavLink>
         </li>
       </div>
     </>

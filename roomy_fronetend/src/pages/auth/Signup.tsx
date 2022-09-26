@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { LOGIN_URL } from "../../constants/constants";
 import SignupForm from "./components/SignupForm";
 
 const Signup: React.FC = (): JSX.Element => {
@@ -8,7 +9,7 @@ const Signup: React.FC = (): JSX.Element => {
       <div className="content-left align-center">
         <div className="choose-action d-flex align-center clear">
           <NavLink
-            to="/login"
+            to={LOGIN_URL}
             style={({ isActive }) => ({
               fontWeight: isActive ? "700" : "500",
               color: isActive

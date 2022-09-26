@@ -1,11 +1,11 @@
 import { useContext, useState, useEffect } from "react";
-import AuthContext from "../../context/AuthProvider";
-import axios from "../../api/axios";
 import ScheduleCard from "../../components/card/ScheduleCard";
+import MeetingsContext from "../../context/MeetingsProvider";
+import AuthContext from "../../context/AuthProvider";
 import Button from "../../components/button/Button";
 import IMeeting from "../../interfaces/IMeeting";
+import axios from "../../api/axios";
 import "./Schedule.scss";
-import MeetingsContext from "../../context/MeetingsProvider";
 
 const Schedule: React.FC = (): JSX.Element => {
   const { auth }: any = useContext(AuthContext);

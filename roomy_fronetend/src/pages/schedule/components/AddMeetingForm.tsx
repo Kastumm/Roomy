@@ -1,11 +1,12 @@
 import { SyntheticEvent, useContext, useEffect, useRef, useState } from "react";
-import axios from "../../../api/axios";
+import { MEETINGS_API_URL } from "../../../constants/constants";
 import MyCalendar from "../../../components/calendar/Calendar";
-import AuthContext from "../../../context/AuthProvider";
 import CalendarEvent from "../../../models/calendarEvent";
+import AuthContext from "../../../context/AuthProvider";
+import axios from "../../../api/axios";
 import "./AddMeetingForm.scss";
 
-const AddMeetingForm:React.FC<any> = ({
+const AddMeetingForm: React.FC<any> = ({
   data,
   setIsOpen,
   selectedRoom,
@@ -35,10 +36,8 @@ const AddMeetingForm:React.FC<any> = ({
   const errorRef: any = useRef();
 
   function createDate(date: any) {
-    try {
-      const isoDate = date.toISOString();
-      return isoDate;
-    } catch (error) {}
+    const isoDate = date?.toISOString();
+    return isoDate;
   }
 
   const startDate = createDate(new Date(`${day}T${startTime}`));
@@ -84,8 +83,8 @@ const AddMeetingForm:React.FC<any> = ({
     if (document.activeElement === addMemberRef.current) {
     } else {
       try {
-        // const response = 
-        await axios.post("/meetings", {
+        // const response =
+        await axios.post(MEETINGS_API_URL, {
           name,
           startDate,
           endDate,
@@ -108,7 +107,7 @@ const AddMeetingForm:React.FC<any> = ({
     const meetingsForRoom = meetingsData.filter(
       (meeting: any) => meeting.room_id === room_id
     );
-    
+
     setEvents(
       meetingsForRoom.map(
         (meeting: any) =>
@@ -217,7 +216,7 @@ const AddMeetingForm:React.FC<any> = ({
   );
 };
 
-const Member:React.FC<any> = ({props}:any): JSX.Element => (
+const Member: React.FC<any> = ({ props }: any): JSX.Element => (
   <span className="member-card">{props.member}</span>
 );
 

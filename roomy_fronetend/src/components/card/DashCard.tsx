@@ -1,5 +1,5 @@
 import IDashCardComponent from "../../interfaces/IDashCardComponent";
-import randomColor from "../../utils";
+import randomColor from "../../utils/utils";
 import ShortData from "../short-data/ShortData";
 import "./DashCard.scss";
 

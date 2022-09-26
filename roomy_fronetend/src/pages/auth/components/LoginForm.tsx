@@ -1,13 +1,12 @@
 import { useState, useRef, useEffect, useContext, SyntheticEvent } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import AuthContext from "../../../context/AuthProvider";
 import jwtDecode from "jwt-decode";
-import axios from "../../../api/axios";
+import { LOGIN_API_URL, SIGNUP_URL } from "../../../constants/constants";
+import AuthContext from "../../../context/AuthProvider";
 import Button from "../../../components/button/Button";
 import Icon from "../../../components/icon/Icon";
+import axios from "../../../api/axios";
 import "./Form.scss";
-
-const LOGIN_URL = "/auth/login";
 
 const LoginForm: React.FC = (): JSX.Element => {
   const { setAuth }: any = useContext(AuthContext);
@@ -33,7 +32,7 @@ const LoginForm: React.FC = (): JSX.Element => {
   const handleLogin = async (event: SyntheticEvent) => {
     event.preventDefault();
     try {
-      const response = await axios.post(LOGIN_URL, { email, password });
+      const response = await axios.post(LOGIN_API_URL, { email, password });
       const accessToken = response?.data.access_token;
       localStorage.setItem("access_token", `Bearer ${accessToken}`);
 
@@ -102,7 +101,7 @@ const LoginForm: React.FC = (): JSX.Element => {
         <div className="additional d-flex justify-between">
           <div className="rememberMe">
             <input type="checkbox" id="rememberMe" />
-            <label htmlFor="rememberMe"/>
+            <label htmlFor="rememberMe" />
             <li>Remember Me</li>
           </div>
           <p>
@@ -114,7 +113,7 @@ const LoginForm: React.FC = (): JSX.Element => {
       <div className="here clear">
         <li>
           Not A Member? Sign Up&nbsp;&nbsp;
-          <NavLink to="/signup">Here.</NavLink>
+          <NavLink to={SIGNUP_URL}>Here.</NavLink>
         </li>
       </div>
     </>

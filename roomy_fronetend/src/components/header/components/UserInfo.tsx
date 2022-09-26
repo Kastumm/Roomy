@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { LOGIN_URL } from "../../../constants/constants";
 import AuthContext from "../../../context/AuthProvider";
 import Button from "../../button/Button";
 import "./UserInfo.scss";
@@ -13,7 +14,7 @@ const UserInfo: React.FC = (): JSX.Element => {
   const handleLogout = async () => {
     await window.localStorage.clear();
     setAuth(null);
-    navigate("/login");
+    navigate(LOGIN_URL);
   };
 
   const handleClick = () => {
