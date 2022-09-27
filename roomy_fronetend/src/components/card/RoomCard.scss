@@ -1,0 +1,50 @@
+.room-card {
+  display: block;
+  height: 142px;
+  max-width: 353px;
+
+  .card-content {
+    display: grid;
+    border-radius: 10px;
+    height: 130px;
+    padding: 15px;
+    background: var(--dash-card-background-color);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+
+    h3 {
+      font-size: 20px;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+
+    .info {
+      display: block;
+      margin-left: 10px;
+    }
+  }
+}
+
+.room-card-border {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0 0 10px 10px;
+  background-color: #f6921e;
+  height: 34px;
+  margin-block: -35px;
+
+  button {
+    background-color: transparent;
+    border: transparent;
+    margin-left: 20px;
+    margin-right: 17px;
+    font-weight: 700;
+    font-size: 11px;
+    cursor: pointer;
+
+    &:hover:nth-child(2) {
+      transform: translateX(6px);
+      transition: 0.3s ease;
+    }
+  }
+}

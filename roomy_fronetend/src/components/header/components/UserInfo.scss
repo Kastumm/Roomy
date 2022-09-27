@@ -1,0 +1,42 @@
+.user-info {
+  .avatar {
+    display: block;
+    background-color: #767676;
+    width: 35px;
+    height: 35px;
+    border-radius: 100px;
+    margin-right: 12px;
+
+    li {
+      margin: 0;
+      margin-top: 4px;
+      margin-left: 11px;
+      color: white;
+      font-weight: 400;
+      font-size: 20px;
+    }
+  }
+
+  .data {
+    li {
+      color: var(--header-text-color);
+      margin: 0;
+    }
+
+    li:first-child {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    li:nth-child(2) {
+      font-weight: 400;
+      font-size: 12px;
+      opacity: 0.75;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,42 @@
+.room-table {
+  table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    border: 1px solid var(--table-border-color);
+    text-indent: 26px;
+
+    thead {
+      background-color: var(--table-header-background-color);
+      box-shadow: 0px 3px 6px rgba(124, 124, 124, 0.12);
+
+      th {
+        color: var(--table-header-text-color);
+        height: 36px;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 21px;
+      }
+    }
+
+    tbody {
+      tr:nth-child(even) {
+        background: var(--table-second-color);
+        border-bottom: 1px solid var(--table-border-color);
+      }
+
+      tr:nth-child(odd) {
+        background: var(--table-main-color);
+        border-bottom: 1px solid var(--table-border-color);
+      }
+
+      td {
+        color: var(--table-body-text-color);
+        height: 45px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 21px;
+      }
+    }
+  }
+}

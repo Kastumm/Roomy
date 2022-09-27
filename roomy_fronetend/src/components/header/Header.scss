@@ -1,0 +1,54 @@
+header {
+  top: 0;
+  position: sticky;
+  background-color: var(--header-color);
+  padding: 21px;
+  width: 100vw;
+
+  .header-left {
+    margin-left: 36px;
+    font-size: 0px;
+    gap: 25px;
+
+    .navigation {
+      gap: 60px;
+
+      a {
+        color: var(--header-text-color);
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  .header-right {
+    margin: 0;
+    padding: 0;
+    margin-right: 50px;
+    gap: 20px;
+
+    .toggle {
+      gap: 5px;
+    }
+
+    span {
+      color: var(--header-text-color);
+      opacity: 50%;
+      font-size: 12px;
+      font-weight: 500;
+    }
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  header .header-left {
+    
+    .navigation {
+      gap: 25px;
+
+      a {
+        font-size: 13px;
+      }
+    }
+  }
+}

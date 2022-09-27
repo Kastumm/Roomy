@@ -1,0 +1,71 @@
+.dash-card {
+  .card-content {
+    height: 75px;
+    width: 100%;
+    padding: 14px;
+    border: 10px solid var(--dash-card-border-color);
+    border-radius: 10px;
+    background: var(--dash-card-background-color);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+
+    .card-left-side {
+      h3 {
+        margin: 0;
+        color: var(--dash-card-text-color);
+        font-weight: 800;
+        font-size: 16px;
+        line-height: 25px;
+      }
+
+      .meeting-info {
+        display: grid;
+        gap: 2px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 25px;
+
+        .appoint {
+          display: flex;
+          align-items: center;
+        }
+
+        li {
+          display: flex;
+          list-style-type: none;
+          color: rgba(21, 21, 21, 0.5);
+        }
+
+        p {
+          color: var(--dash-card-text-color);
+          margin: 0;
+        }
+      }
+    }
+
+    .card-right-side {
+      gap: 16px;
+      margin-right: 28px;
+
+      li {
+        font-size: 16px;
+        list-style-type: none;
+        color: rgba(21, 21, 21, 0.5);
+      }
+    }
+  }
+
+  .border {
+    position: static;
+    border-radius: 0 10px 10px 0;
+    background-color: #f6921e;
+    width: 12px;
+    height: 121px;
+    margin-left: -11px;
+    margin-block: 1.5px;
+  }
+
+  &:hover {
+    transform: translateX(15px);
+    transition: ease 0.3s;
+  }
+}
