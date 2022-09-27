@@ -1,0 +1,40 @@
+.darkBG {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  animation: modal-open 0.75s;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .modal {
+    background: #e9e9e9;
+    border-radius: 5px;
+    box-shadow: -4px -4px 10px rgba(0, 0, 0, 0.25),
+      4px 4px 10px rgba(0, 0, 0, 0.25);
+
+    .cross {
+      justify-content: end;
+      cursor: pointer;
+
+      img {
+        width: 12px;
+        transform: translateX(-20px) translateY(20px);
+      }
+    }
+
+    .actions {
+      background-color: #ffffff;
+      padding: 20px 40px;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.meeting-form {
+  display: grid;
+  padding: 50px;
+  animation: modal-content-open 1s;
+
+  input {
+    width: 410px;
+  }
+
+    .pick-date {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+      input {
+        width: 190px;
+      }
+      
+      .pick-time {
+
+        input {
+          width: 80px;
+        }
+
+        li{
+            margin:none;
+        }
+      }
+    }
+}
+
+.member-card{
+  width: fit-content;
+  color:#FFFFFF ;
+  border-radius: 3px;
+  padding: 8px;
+  background-color: #8C8B8B;
+}
+
+.meeting-members{
+  width: 410px;
+  
+  span{
+    display: inline-block;
+    margin: 3px;
+  }
+}

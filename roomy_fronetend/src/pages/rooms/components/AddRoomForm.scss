@@ -1,0 +1,26 @@
+.modal-content{
+    padding: 20px 40px;
+    animation: modal-content-open 1s;
+
+    p{
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    
+    form{
+      gap: 41px;
+      padding-bottom: 30px;
+      margin-top:30px;
+
+      li{
+        font-size: 14px;
+        font-weight: 500;
+        color: #151515;
+      }
+      
+      input{
+        width:340px;
+      }
+    }
+  }
