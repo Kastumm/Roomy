@@ -7,7 +7,7 @@ import {
 } from "../../constants/constants";
 import ThemeContext from "../../context/ThemeProvider";
 import AuthContext from "../../context/AuthProvider";
-import TQuarterLogo from "./components/TQuarterLogo";
+import TQuarterLogo from "./components/RoomyLogo";
 import ToggleDark from "../switch/ToggleDark";
 import UserInfo from "./components/UserInfo";
 import Icon from "../icon/Icon";

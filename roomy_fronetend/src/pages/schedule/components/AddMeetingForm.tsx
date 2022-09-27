@@ -35,9 +35,12 @@ const AddMeetingForm: React.FC<any> = ({
   const timeExceedErrorRef: any = useRef();
   const errorRef: any = useRef();
 
-  function createDate(date: any) {
-    const isoDate = date?.toISOString();
-    return isoDate;
+  function createDate(date?: any) {
+    try{
+      const isoDate = date?.toISOString();
+      return isoDate;
+    }catch(error){
+    }
   }
 
   const startDate = createDate(new Date(`${day}T${startTime}`));
@@ -83,7 +86,6 @@ const AddMeetingForm: React.FC<any> = ({
     if (document.activeElement === addMemberRef.current) {
     } else {
       try {
-        // const response =
         await axios.post(MEETINGS_API_URL, {
           name,
           startDate,
